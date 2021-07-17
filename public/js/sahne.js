@@ -16,51 +16,51 @@ class Sahne {
     this.scene = new THREE.Scene()
 
     // Objects
-    // const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
-    // https://threejs.org/docs/#api/en/geometries/SphereGeometry
-    this.geometry = new THREE.SphereBufferGeometry(.5,64,64)
+    // this.geometry = new THREE.SphereBufferGeometry(.5,64,64)
+    this.geometry = new THREE.BoxGeometry( 1, 1, 1 );
 
 
     // Materials
-
-    // const material = new THREE.MeshBasicMaterial()
     this.material = new THREE.MeshStandardMaterial()
     this.material.metalness = 0.7
     this.material.roughness = 0.2
     this.material.normalMap = this.normalTexture
     this.material.color = new THREE.Color(0x292929)
+
     // Mesh
-    this.sphere = new THREE.Mesh(this.geometry,this.material)
-    this.scene.add(this.sphere)
+    this.cubeA = new THREE.Mesh(this.geometry,this.material)
+    this.cubeB = new THREE.Mesh(this.geometry,this.material)
 
-    // Lights
+    this.cubeA.position.set( 0, 0, 0 );
+    this.cubeB.position.set( 1, 1, 0 );
 
-    this.pointLight = new THREE.PointLight(0xffffff, 0.1)
-    this.pointLight.position.x = 2
-    this.pointLight.position.y = 3
-    this.pointLight.position.z = 4
-    this.scene.add(this.pointLight)
+    this.group = new THREE.Group();
+    this.group.add( this.cubeA );
+    this.group.add( this.cubeB );
+
+    this.scene.add( this.group );
+
+
+    // this.scene.add(this.cube)
+
+    // Light 1
+    this.pointLight1 = new THREE.PointLight(0xff0000, 1)
+    this.pointLight1.position.set(-1.86,1,-1.65)
+    this.pointLight1.intensity = 10
+    this.scene.add(this.pointLight1)
 
     // Light 2
-    this.pointLight2 = new THREE.PointLight(0xff0000, 1)
-    this.pointLight2.position.set(-1.86,1,-1.65)
+    this.pointLight2 = new THREE.PointLight(0xffb3, 1)
+    this.pointLight2.position.set(2.66,-1.58,-1.6)
     this.pointLight2.intensity = 10
     this.scene.add(this.pointLight2)
-
-    this.pointLight3 = new THREE.PointLight(0xffb3, 1)
-    this.pointLight3.position.set(2.66,-1.58,-1.6)
-    this.pointLight3.intensity = 10
-    this.scene.add(this.pointLight3)
 
     this.sizes = {
       width: window.innerWidth,
       height: window.innerHeight
     }
 
-    /**
-    * Camera
-    */
-    // Base camera
+    // Camera
     this.camera = new THREE.PerspectiveCamera(75, this.sizes.width / this.sizes.height, 0.1, 100)
     this.camera.position.x = 0
     this.camera.position.y = 0
@@ -68,12 +68,10 @@ class Sahne {
     this.scene.add(this.camera)
 
     // Controls
-    // const controls = new OrbitControls(camera, canvas)
-    // controls.enableDamping = true
+    this.controls = new OrbitControls(this.camera, this.canvas)
+    this.controls.enableDamping = true
 
-    /**
-    * Renderer
-    */
+    // Renderer
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
       alpha: true
@@ -87,9 +85,6 @@ class Sahne {
     this.mouseY = 0
     this.targetX = 0
     this.targetY = 0
-
-    document.addEventListener('mousemove',this.onDocumentMouseMove)
-    window.addEventListener('resize',this.resize)
 
   }
 
@@ -118,6 +113,12 @@ class Sahne {
     this.material.needsUpdate = true;
   }
 
+  updateSize = (scl) => {
+    this.cubeA.scale.x = scl
+    this.cubeA.scale.y = scl
+    this.cubeA.scale.z = scl
+  }
+
   tick = () =>
   {
     this.targetX = this.mouseX * .001
@@ -126,14 +127,13 @@ class Sahne {
     const elapsedTime = this.clock.getElapsedTime()
 
     // Update objects
-    this.sphere.rotation.y = .4 * elapsedTime
-
-    this.sphere.rotation.y += .6 * (this.targetX - this.sphere.rotation.y)
-    this.sphere.rotation.x += .6 * (this.targetY - this.sphere.rotation.x)
-    this.sphere.position.z += .6 * (this.targetY - this.sphere.rotation.x)
+    this.group.rotation.y = .4 * elapsedTime
+    this.group.rotation.y += .6 * (this.targetX - this.group.rotation.y)
+    this.group.rotation.x += .6 * (this.targetY - this.group.rotation.x)
+    this.group.position.z += .6 * (this.targetY - this.group.rotation.x)
 
     // Update Orbital Controls
-    // controls.update()
+    this.controls.update()
 
     // Render
     this.renderer.render(this.scene, this.camera)

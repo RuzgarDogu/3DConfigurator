@@ -9,7 +9,78 @@
   <link rel="stylesheet" href="public/css/main.css">
 </head>
 <body>
-  <button id="btn-1" type="button" class="btn btn-outline-info" name="button">Test 1</button>
+
+
+
+
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-12">
+              <ul class="nav nav-tabs flex-nowrap" role="tablist" style="display:none;">
+                  <li role="presentation" class="nav-item">
+                      <a href="#step1" class="nav-link active" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1"> 1 </a>
+                  </li>
+                  <li role="presentation" class="nav-item">
+                      <a href="#step2" class="nav-link disabled" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2"> 2 </a>
+                  </li>
+                  <li role="presentation" class="nav-item">
+                      <a href="#step3" class="nav-link disabled" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3"> 3 </a>
+                  </li>
+                  <li role="presentation" class="nav-item">
+                      <a href="#complete" class="nav-link disabled" data-toggle="tab" aria-controls="complete" role="tab" title="Complete"> 4 </a>
+                  </li>
+              </ul>
+                  <div class="tab-content">
+                      <div class="tab-pane active" role="tabpanel" id="step1">
+                          <h3>Texture Değiştirme</h3>
+                          <p>Texture Değiştirme Açıklaması</p>
+                          <button id="btn-1-1" type="button" class="btn btn-primary next-step float-right">Texture 1</button>
+                          <button id="btn-1-2" type="button" class="btn btn-primary next-step float-right">Texture 2</button>
+                      </div>
+                      <div class="tab-pane" role="tabpanel" id="step2">
+                          <h3>Boyut Değiştirme</h3>
+                          <p>Boyut Değiştirme Açıklaması</p>
+                          <button id="btn-2-1" type="button" class="btn btn-primary next-step float-right">Küçük</button>
+                          <button id="btn-2-2" type="button" class="btn btn-primary next-step float-right">Orta</button>
+                          <button id="btn-2-3" type="button" class="btn btn-primary next-step float-right">Büyük</button>
+                          <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+                          </li>
+                      </div>
+                      <div class="tab-pane" role="tabpanel" id="step3">
+                          <h3>Step 3</h3>
+                          <p>This is step 3</p>
+                          <ul class="float-right">
+                              <li class="list-inline-item">
+                                  <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+                              </li>
+                              <li class="list-inline-item">
+                                  <button type="button" class="btn btn-outline-primary next-step">Skip</button>
+                              </li>
+                              <li class="list-inline-item">
+                                  <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="tab-pane" role="tabpanel" id="complete">
+                          <h3>Complete!</h3>
+                          <p>You have successfully completed all steps.</p>
+                          <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+                          </li>
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
   <canvas class="conf"></canvas>
   <script src="dist/main.js" charset="utf-8"></script>
 </body>
