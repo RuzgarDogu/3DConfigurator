@@ -1,0 +1,30 @@
+{
+  "name": "3dconfigurator",
+  "version": "0.1.0",
+  "description": "3D Structure Configurator built with three.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuzgarDogu/3DConfigurator.git"
+  },
+  "author": "RuzgarDogu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuzgarDogu/3DConfigurator/issues"
+  },
+  "homepage": "https://github.com/RuzgarDogu/3DConfigurator#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
+    "three": "^0.130.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
