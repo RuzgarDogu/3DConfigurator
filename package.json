@@ -19,6 +19,7 @@
   "homepage": "https://github.com/RuzgarDogu/3DConfigurator#readme",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "dat.gui": "^0.7.7",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "three": "^0.130.1"

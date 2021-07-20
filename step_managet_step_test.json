@@ -1,0 +1,288 @@
+{
+  "steps":[
+    {
+      "id":1,
+      "options":[
+        {
+          "prevopt":[0],
+          "optid":11,
+          "text": "Çift Çatılı",
+          "next_step":2
+        },
+        {
+          "prevopt":[0],
+          "optid":12,
+          "text": "Tek Çatılı",
+          "next_step":3
+        }
+      ]
+    },
+    {
+      "id":2,
+      "options":[
+        {
+          "prevopt":[11],
+          "optid":21,
+          "text": "8.99",
+          "next_step":3
+        },
+        {
+          "prevopt":[12],
+          "optid":22,
+          "text": "12.20",
+          "next_step":3
+        },
+        {
+          "prevopt":[11],
+          "optid":23,
+          "text": "12.93",
+          "next_step":3
+        },
+        {
+          "prevopt":[11],
+          "optid":24,
+          "text": "16.88",
+          "next_step":3
+        },
+        {
+          "prevopt":[11],
+          "optid":25,
+          "text": "20.82",
+          "next_step":3
+        }
+      ]
+      },
+      {
+        "id":3,
+        "options":[
+          {
+            "prevopt":[21,22,23,24,25],
+            "optid":31,
+            "text": "5",
+            "next_step":4
+          },
+          {
+            "prevopt":[21,22,23,24,25],
+            "optid":32,
+            "text": "6",
+            "next_step":4
+          },
+          {
+            "prevopt":[22],
+            "optid":33,
+            "text": "7",
+            "next_step":4
+          }
+        ]
+        },
+        {
+          "id":4,
+          "options":[
+            {
+              "prevopt":[31,32,33],
+              "optid":41,
+              "text": "5",
+              "next_step":5
+            },
+            {
+              "prevopt":[31,32,33],
+              "optid":42,
+              "text": "6",
+              "next_step":5
+            }
+          ]
+          },
+          {
+            "id":5,
+            "options":[
+              {
+                "prevopt":[41,42],
+                "optid":51,
+                "text": "3",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":52,
+                "text": "4",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":53,
+                "text": "5",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":54,
+                "text": "6",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":55,
+                "text": "7",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":56,
+                "text": "8",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":57,
+                "text": "9",
+                "next_step":6
+              },
+              {
+                "prevopt":[41,42],
+                "optid":58,
+                "text": "10",
+                "next_step":6
+              }
+            ]
+            },
+            {
+              "id":6,
+              "options":[
+                {
+                  "prevopt":[51,52,53,54,55,56,57,58],
+                  "optid":61,
+                  "text": "Galvanizli",
+                  "next_step":7
+                },
+                {
+                  "prevopt":[51,52,53,54,55,56,57,58],
+                  "optid":62,
+                  "text": "Boyalı",
+                  "next_step":7
+                }
+              ]
+              },
+              {
+                "id":7,
+                "options":[
+                  {
+                    "prevopt":[61,62],
+                    "optid":71,
+                    "text": "Çelik Kaplama",
+                    "next_step":8
+                  },
+                  {
+                    "prevopt":[61,62],
+                    "optid":72,
+                    "text": "Çelik Kaplama + Çatı Pencereleri",
+                    "next_step":8
+                  }
+                ]
+                },
+                {
+                  "id":8,
+                  "options":[
+                    {
+                      "prevopt":[71,72],
+                      "optid":81,
+                      "text": "Çatı",
+                      "next_step":11
+                    },
+                    {
+                      "prevopt":[71,72],
+                      "optid":82,
+                      "text": "3 Duvar",
+                      "next_step":9
+                    },
+                    {
+                      "prevopt":[71,72],
+                      "optid":83,
+                      "text": "4 Duvar",
+                      "next_step":9
+                    }
+                  ]
+                  },
+                  {
+                    "id":9,
+                    "options":[
+                      {
+                        "prevopt":[82],
+                        "optid":91,
+                        "text": "Arka",
+                        "next_step":11
+                      },
+                      {
+                        "prevopt":[82],
+                        "optid":92,
+                        "text": "Kenar",
+                        "next_step":11
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":93,
+                        "text": "Arka",
+                        "next_step":10
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":94,
+                        "text": "Kenar",
+                        "next_step":10
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":95,
+                        "text": "Arka + Kenar",
+                        "next_step":10
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":96,
+                        "text": "Arka",
+                        "next_step":10
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":97,
+                        "text": "Kenar",
+                        "next_step":10
+                      },
+                      {
+                        "prevopt":[83],
+                        "optid":98,
+                        "text": "Arka + Kenar",
+                        "next_step":10
+                      }
+                    ]
+                    },
+                    {
+                      "id":10,
+                      "options":[
+                        {
+                          "prevopt":[93,94,95,96,97,98],
+                          "optid":101,
+                          "text": "Yok",
+                          "next_step":11
+                        },
+                        {
+                          "prevopt":[93,94,95,96,97,98],
+                          "optid":102,
+                          "text": "Kenar",
+                          "next_step":11
+                        },
+                        {
+                          "prevopt":[93,94,95,96],
+                          "optid":103,
+                          "text": "Arka",
+                          "next_step":11
+                        },
+                        {
+                          "prevopt":[93,94,95,96],
+                          "optid":104,
+                          "text": "Arka + Kenar",
+                          "next_step":11
+                        }
+                      ]
+                      }
+                    ]
+                  }

@@ -1,31 +1,35 @@
 console.log("controls.js");
 
 const sahne = window.sahne;
-
+//
 $(document).on('click mouseover', '#btn-1-1', function(e) {
-  sahne.updateMaterial('public/img/textures/normalmap2.png');
+  sahne.updateMaterial(0,'public/img/textures/concrete.jpg');
 })
-
+//
 $(document).on('click mouseover', '#btn-1-2', function(e) {
-  sahne.updateMaterial('public/img/textures/NormalMap.png');
+  sahne.updateMaterial(0,'public/img/textures/pv_panel.png');
 })
-
+//
 $(document).on('click mouseover', '#btn-2-1', function(e) {
-  sahne.updateSize(0.5);
+  sahne.updateMaterial(2,'public/img/textures/galvanizli.jpg');
 })
 
 $(document).on('click mouseover', '#btn-2-2', function(e) {
-  sahne.updateSize(1);
+  sahne.updateMaterial(2,'public/img/textures/boyali.jpg');
 })
-
-$(document).on('click mouseover', '#btn-2-3', function(e) {
-  sahne.updateSize(1.4);
+//
+// $(document).on('click mouseover', '#btn-2-3', function(e) {
+//   sahne.updateSize(1.4);
+// })
+//
+$(document).on('click mouseover', '#btn-3-1', function(e) {
+  sahne.cloneElement();
 })
-
-document.addEventListener('mousemove',sahne.onDocumentMouseMove)
-window.addEventListener('resize',sahne.resize)
-
-
+//
+// document.addEventListener('mousemove',sahne.onDocumentMouseMove)
+// window.addEventListener('resize',sahne.resize)
+//
+//
 //Initialize tooltips
 $('.nav-tabs > li a[title]').tooltip();
 

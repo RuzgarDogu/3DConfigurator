@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "steps": [
+    {
+      "id": 1,
+      "name": "cati_adedi",
+      "baslik": {
+        "tr": "Çatı Adedi",
+        "en": "..."
+      },
+      "aciklama": {
+        "tr": "Çatı adedi açıklaması",
+        "en": "..."
+      },
+      "options": [
+        {
+          "id": 101,
+          "name": "cift_catili",
+          "text": "Çift Çatılı"
+        },
+        {
+          "id": 102,
+          "name": "tek_catili",
+          "text": "Tek Çatılı"
+        }
+      ]
+    }
+  ]
+}

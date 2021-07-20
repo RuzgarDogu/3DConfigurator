@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-
 class Sahne {
 
   constructor(args) {
@@ -117,6 +116,12 @@ class Sahne {
     this.cubeA.scale.x = scl
     this.cubeA.scale.y = scl
     this.cubeA.scale.z = scl
+  }
+
+  updateElement = () => {
+    this.group.remove(this.cubeA);
+    this.controls.update();
+    this.camera.updateProjectionMatrix();
   }
 
   tick = () =>
