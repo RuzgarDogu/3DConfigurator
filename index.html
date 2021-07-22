@@ -17,7 +17,7 @@
         <ul id="ul-stepLinks" class="nav nav-tabs flex-nowrap" role="tablist" style="display:none;">
 
           <li role="presentation" class="nav-item">
-            <a href="#step0" class="nav-link active" data-toggle="tab" aria-controls="step0" role="tab" title="Step 0"> 0 </a>
+            <a id="a-step0" href="#step0" class="nav-link active" data-toggle="tab" aria-controls="step0" role="tab" title="Step 0"> 0 </a>
           </li>
           <li role="presentation" class="nav-item">
             <a href="#step1" class="nav-link disabled" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1"> 1 </a>
@@ -59,14 +59,14 @@
             <h3>Başlayın</h3>
             <p>Modülü kullanmaya başlamak için lütfen aşağıdaki butonu tıklayın</p>
             <div class="dv-seceneklerButtons">
-              <button id="btn-0" data-optid="0" data-name="baslangic" type="button" class="btn btn-primary next-step float-right">Başlayın</button>
+              <button id="btn-0" data-optid="0" data-name="baslangic" type="button" class="btn btn-info btn-sm next-step float-right">Başlayın</button>
             </div>
           </div>
           <div class="tab-pane" role="tabpanel" id="step1" data-step="1">
             <h3>Çatı Adedi</h3>
             <p>Step 1</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -74,7 +74,7 @@
             <h3>Genişlik</h3>
             <p>Step 2</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -82,7 +82,7 @@
             <h3>Yükseklik</h3>
             <p>Step 3</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -90,7 +90,7 @@
             <h3>Aks Açıklığı</h3>
             <p>Step 4</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -98,7 +98,7 @@
             <h3>Aks Adedi</h3>
             <p>Step 5</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -106,7 +106,7 @@
             <h3>Ayak Rengi</h3>
             <p>Step 6</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -114,7 +114,7 @@
             <h3>Çatı Kaplama</h3>
             <p>Step 7</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -122,7 +122,7 @@
             <h3>Kenar Duvarlar</h3>
             <p>Step 8</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -130,7 +130,7 @@
             <h3>Körük</h3>
             <p>Step 9</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -138,7 +138,7 @@
             <h3>Personel Kapıları</h3>
             <p>Step 10</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
             </li>
             <div class="dv-seceneklerButtons"></div>
           </div>
@@ -146,7 +146,8 @@
             <h3>Tamamlandı!</h3>
             <p>Tüm aşamalar tamamlandı.</p>
             <li class="list-inline-item">
-              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+              <button type="button" class="btn btn-sm btn-outline-primary prev-step">Önceki Adım</button>
+              <button id="btn-startOver" type="button" class="btn btn-sm btn-outline-primary home-step">Baştan Başlayın</button>
             </li>
           </div>
           <div class="clearfix"></div>

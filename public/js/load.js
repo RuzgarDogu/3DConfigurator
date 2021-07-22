@@ -210,19 +210,39 @@ class Yukleme extends THREE.Group {
 
   }
 
-  updateSahne = (d) => {
-    if (d.cati_adedi == 11) {
-      this.gltfElements.forEach((item, i) => {
-        console.log("....");
-        console.log(item);
-        console.log("....");
-      });
-    } else if (d.cati_adedi = 12) {
-      this.group.remove(this.gltfElements[3]);
-      this.group.remove(this.gltfElements[4]);
-      this.group.remove(this.gltfElements[5]);
-      this.centerControls();
+  update_cati_adedi = (opt) => {
+    console.log("ok");
+  }
+
+  update_baslangic = (opt) => {
+    console.log(opt);
+  }
+
+  updateSahne = (name,opt) => {
+    let func = 'update_'+name;
+
+    if (typeof this[func] === "function") {
+        this[func](opt);
     }
+
+    // let func = 'update_'+name;
+    // this.update_cati_adedi(opt);
+    // if (d.cati_adedi == 11) {
+    //   this.group.add(this.gltfElements[3]);
+    //   this.group.add(this.gltfElements[4]);
+    //   this.group.add(this.gltfElements[5]);
+    //   this.centerControls();
+    //   this.gltfElements.forEach((item, i) => {
+    //     console.log("....");
+    //     console.log(item);
+    //     console.log("....");
+    //   });
+    // } else if (d.cati_adedi = 12) {
+    //   this.group.remove(this.gltfElements[3]);
+    //   this.group.remove(this.gltfElements[4]);
+    //   this.group.remove(this.gltfElements[5]);
+    //   this.centerControls();
+    // }
   }
 
 }
