@@ -211,7 +211,6 @@ class Yukleme extends THREE.Group {
   }
 
   update_cati_adedi = (opt) => {
-    console.log("ok");
     if (opt == 11) {
       this.group.add(this.gltfElements[3]);
       this.group.add(this.gltfElements[4]);
