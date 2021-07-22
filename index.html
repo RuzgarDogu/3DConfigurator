@@ -14,9 +14,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        <ul class="nav nav-tabs flex-nowrap" role="tablist" style="display:none;">
+        <ul id="ul-stepLinks" class="nav nav-tabs flex-nowrap" role="tablist" style="display:none;">
+
           <li role="presentation" class="nav-item">
-            <a href="#step1" class="nav-link active" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1"> 1 </a>
+            <a href="#step0" class="nav-link active" data-toggle="tab" aria-controls="step0" role="tab" title="Step 0"> 0 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step1" class="nav-link disabled" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1"> 1 </a>
           </li>
           <li role="presentation" class="nav-item">
             <a href="#step2" class="nav-link disabled" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2"> 2 </a>
@@ -25,39 +29,122 @@
             <a href="#step3" class="nav-link disabled" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3"> 3 </a>
           </li>
           <li role="presentation" class="nav-item">
-            <a href="#complete" class="nav-link disabled" data-toggle="tab" aria-controls="complete" role="tab" title="Complete"> 4 </a>
+            <a href="#step4" class="nav-link disabled" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4"> 4 </a>
           </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step5" class="nav-link disabled" data-toggle="tab" aria-controls="step5" role="tab" title="Complete"> Complete </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step6" class="nav-link disabled" data-toggle="tab" aria-controls="step6" role="tab" title="Step 5"> 5 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step7" class="nav-link disabled" data-toggle="tab" aria-controls="step7" role="tab" title="Step 6"> 6 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step8" class="nav-link disabled" data-toggle="tab" aria-controls="step8" role="tab" title="Step 7"> 7 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step9" class="nav-link disabled" data-toggle="tab" aria-controls="step9" role="tab" title="Step 8"> 8 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a href="#step10" class="nav-link disabled" data-toggle="tab" aria-controls="step10" role="tab" title="Step 9"> 9 </a>
+          </li>
+          <li role="presentation" class="nav-item">
+            <a id="btn-complete" href="#complete" class="nav-link disabled" data-toggle="tab" aria-controls="complete" role="tab" title="Complete"> 4 </a>
+          </li>
+
         </ul>
         <div class="tab-content">
-          <div class="tab-pane active" role="tabpanel" id="step1">
-            <button class="btn btn-secondary" id="btn-steptest">STEP TEST</button>
-            <h3>Texture Değiştirme</h3>
-            <p>Texture Değiştirme Açıklaması</p>
-            <button id="btn-1-1" type="button" class="btn btn-primary next-step float-right">Texture 1</button>
-            <button id="btn-1-2" type="button" class="btn btn-primary next-step float-right">Texture 2</button>
+          <div class="tab-pane active" role="tabpanel" id="step0" data-step="0">
+            <h3>Başlayın</h3>
+            <p>Modülü kullanmaya başlamak için lütfen aşağıdaki butonu tıklayın</p>
+            <div class="dv-seceneklerButtons">
+              <button id="btn-0" data-optid="0" data-name="baslangic" type="button" class="btn btn-primary next-step float-right">Başlayın</button>
+            </div>
           </div>
-          <div class="tab-pane" role="tabpanel" id="step2">
-            <h3>Boyut Değiştirme</h3>
-            <p>Boyut Değiştirme Açıklaması</p>
-            <button id="btn-2-1" type="button" class="btn btn-primary next-step float-right">Galvanizli</button>
-            <button id="btn-2-2" type="button" class="btn btn-primary next-step float-right">Boyalı</button>
+          <div class="tab-pane" role="tabpanel" id="step1" data-step="1">
+            <h3>Çatı Adedi</h3>
+            <p>Step 1</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step2" data-step="2">
+            <h3>Genişlik</h3>
+            <p>Step 2</p>
             <li class="list-inline-item">
               <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
             </li>
+            <div class="dv-seceneklerButtons"></div>
           </div>
-          <div class="tab-pane" role="tabpanel" id="step3">
-            <h3>Nesne Seçme</h3>
-            <p>Nesne Seçme Açıklaması</p>
-            <button id="btn-3-1" type="button" class="btn btn-primary next-step float-right">Çoğalt</button>
-            <!-- <button id="btn-3-2" type="button" class="btn btn-primary next-step float-right">2</button>
-            <button id="btn-3-3" type="button" class="btn btn-primary next-step float-right">1+2</button> -->
+          <div class="tab-pane" role="tabpanel" id="step3"  data-step="3">
+            <h3>Yükseklik</h3>
+            <p>Step 3</p>
             <li class="list-inline-item">
               <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
             </li>
+            <div class="dv-seceneklerButtons"></div>
           </div>
-          <div class="tab-pane" role="tabpanel" id="complete">
-            <h3>Complete!</h3>
-            <p>You have successfully completed all steps.</p>
+          <div class="tab-pane" role="tabpanel" id="step4" data-step="4">
+            <h3>Aks Açıklığı</h3>
+            <p>Step 4</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step5" data-step="5">
+            <h3>Aks Adedi</h3>
+            <p>Step 5</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step6"  data-step="6">
+            <h3>Ayak Rengi</h3>
+            <p>Step 6</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step7"  data-step="7">
+            <h3>Çatı Kaplama</h3>
+            <p>Step 7</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step8" data-step="8">
+            <h3>Kenar Duvarlar</h3>
+            <p>Step 8</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Önceki Adım</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step9" data-step="9">
+            <h3>Körük</h3>
+            <p>Step 9</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step10"  data-step="10">
+            <h3>Personel Kapıları</h3>
+            <p>Step 10</p>
+            <li class="list-inline-item">
+              <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
+            </li>
+            <div class="dv-seceneklerButtons"></div>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="complete" data-step="11">
+            <h3>Tamamlandı!</h3>
+            <p>Tüm aşamalar tamamlandı.</p>
             <li class="list-inline-item">
               <button type="button" class="btn btn-outline-primary prev-step">Previous</button>
             </li>
