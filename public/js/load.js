@@ -212,6 +212,17 @@ class Yukleme extends THREE.Group {
 
   update_cati_adedi = (opt) => {
     console.log("ok");
+    if (opt == 11) {
+      this.group.add(this.gltfElements[3]);
+      this.group.add(this.gltfElements[4]);
+      this.group.add(this.gltfElements[5]);
+      this.centerControls();
+    } else if (opt = 12) {
+      this.group.remove(this.gltfElements[3]);
+      this.group.remove(this.gltfElements[4]);
+      this.group.remove(this.gltfElements[5]);
+      this.centerControls();
+    }
   }
 
   update_baslangic = (opt) => {
